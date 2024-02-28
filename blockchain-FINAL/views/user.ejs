@@ -1,0 +1,33 @@
+<%- include('partials/header'); -%>
+
+
+
+<section class="articles" style="padding-left: 600px;">
+    <article>
+      <div class="article-wrapper">
+        <% if (oneuser.image) { %>
+            <figure>
+                <img style="width: 368px;height: 207px;" src="<%=oneuser.image%>"" alt="...">
+            </figure>
+          <% }else{ %>
+          
+          
+        <figure>
+            <img style="width: 368px;height: 207px;" src="https://t4.ftcdn.net/jpg/04/70/29/97/240_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg" alt="...">
+        </figure>
+        <%}%>
+        <div class="article-body" style="padding-left: 45px;">
+          <h2><%=oneuser.email%></h2>
+        </a>
+        <h3 style="text-align: justify;">
+        <%=oneuser.f_name%> <%=oneuser.s_name%> 
+        </h3>
+          <p>
+            <%=oneuser.bio%>
+          </p>
+        
+        </div>
+      </div>
+    </article>  
+
+<%- include('partials/footer'); -%>

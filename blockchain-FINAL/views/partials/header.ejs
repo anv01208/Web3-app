@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WolfStreet</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <nav>
+    <h1><a href="/">WolfStreet</a></h1>
+    <ul>
+      <% if (user) { %>
+        <li><a href="/users">Users</a></li>
+        <li><a href="/profile">Profile</a></li>
+
+        <li><button id="wallet-connect">Connect Wallet</button></li>
+        <li><a href="/logout">Log out</a></li>
+      <% } else { %>
+        <li><a href="/login">Log in</a></li>
+        <li><a href="/signup" class="btn">Sign up</a></li>
+      <% } %>
+    </ul>
+  </nav>
+  <script src="/js/connectWallet.js"></script>
